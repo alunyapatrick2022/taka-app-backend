@@ -108,7 +108,7 @@ const sendEmail = async (subject, text) => {
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
             to: process.env.DEVELOPER_EMAIL, // Developers' email address
-            // cc: process.env.CC_EMAIL, // Carbon Copy recipient
+            cc: process.env.CC_EMAIL, // Carbon Copy recipient
             subject: subject,
             text: text,
         });
